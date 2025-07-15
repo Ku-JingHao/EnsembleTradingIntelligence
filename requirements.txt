@@ -1,0 +1,7 @@
+shiny
+shinyswatch
+yfinance
+plotly
+pandas
+numpy
+Jinja2
