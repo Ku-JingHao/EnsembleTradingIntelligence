@@ -5,3 +5,12 @@ plotly
 pandas
 numpy
 Jinja2
+darts
+optuna
+scikit-learn
+torch
+pytorch-lightning
+matplotlib
+seaborn
+tabulate
+joblib
