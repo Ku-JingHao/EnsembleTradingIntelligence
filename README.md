@@ -90,11 +90,9 @@ By integrating machine learning predictions—especially ensemble models that co
   - Trade logs
   - Performance metrics
 
-### 7. **Reak-Time Evaluation**
-- Runs full backtests with:
-  - Equity curve visualization
-  - Trade logs
-  - Performance metrics
+### 7. **Real-Time Evaluation**
+- Evaluates constructed trading strategies and model predictions on live or streaming market data.
+- Monitors performance and adapts strategies in real time for practical deployment.
 ---
 
 ## 📈 Zero-Lag MACD Strategy Enhancement
@@ -149,6 +147,14 @@ Use the provided `.ipynb` notebooks for:
 - Visualization  
 - Research documentation
 
+**Included Notebooks:**
+- `Daily_ModelConstruction.ipynb`: Model construction and ensemble research for daily data.
+- `Hourly_ModelConstruction.ipynb`: Model construction and ensemble research for hourly data.
+- `Daily_BacktestingFramework.ipynb`: Backtesting and evaluation of enhanced Zero-Lag MACD strategies (daily).
+- `Hourly_BacktestingFramework.ipynb`: Backtesting and evaluation of enhanced Zero-Lag MACD strategies (hourly).
+
+These notebooks provide for building models, constructing ensembles, and evaluating the enhanced Zero-Lag MACD trading strategy.
+
 ---
 
 ### 4. Model Deployment & Loading
@@ -157,6 +163,14 @@ Use the provided `.ipynb` notebooks for:
 - Use `model_loader.py` to:
   - Load models
   - Generate predictions for new data or live trading
+    
+---
+
+### 5. Real-Time Trading Bots
+
+- The `realtime_tradingbot/` directory contains implementations of real-time trading bots using the ML-enhanced Zero-Lag MACD strategy.
+- These bots are designed for live trading scenarios, integrating model predictions and technical signals for automated decision-making.
+
 
 ## 🔁 Flowcharts
 
