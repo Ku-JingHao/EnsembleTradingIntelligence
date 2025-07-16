@@ -1,7 +1,5 @@
 # Stock Price Prediction and Zero-Lag MACD Enhancement Using Ensemble Methods
 
-# Stock Price Prediction & Zero-Lag MACD Trading Strategy Enhancement with Ensemble Machine Learning
-
 ## Overview
 This project investigates how ensemble machine learning models using simple averaging can improve the accuracy and generalizability of stock price predictions. These enhanced predictions are then integrated into trading strategies based on the Zero-Lag MACD technical indicator. 
 The ultimate goal is to filter trading signals by forecasting one-step-ahead stock prices, enabling more effective buy and sell decisions in real-world trading scenarios.
@@ -47,5 +45,181 @@ By integrating machine learning predictions—especially ensemble models that co
 ├── Hourly_BacktestingFramework.ipynb  # Jupyter notebook: backtesting (hourly)
 │
 ├── models/                     # Saved/trained models and configs
+├── realtime_tradingbot/        # Various types of real-time trading bots using the innovative ML-enhanced Zero-Lag MACD trading strategy
 ├── requirements.txt            # Python dependencies
 └── README.md                   # This file
+
+
+---
+
+## ⚙️ How It Works
+
+### 1. **Data Preparation**
+- Fetches historical stock data (hourly/daily) using `yfinance`
+- Preprocessing and feature engineering
+
+### 2. **Model Training**
+- Trains individual models:
+  - Linear Regression
+  - Random Forest
+  - XGBoost
+  - LSTM
+  - GRU
+- Builds ensemble combinations using **simple averaging**
+
+### 3. **Model Selection**
+- Evaluates models on:
+  - RMSE
+  - MSE
+  - MAE
+  - MAPE
+  - R² Score
+  - CV
+- Selects best performing model/ensemble per stock and interval
+
+### 4. **Prediction-Enhanced Trading**
+- Integrates predictions with Zero-Lag MACD
+- Only executes trades if predicted direction confirms MACD signal
+
+### 5. **Parameter Optimization**
+- Uses `Optuna` to tune MACD parameters per strategy
+
+### 6. **Backtesting & Evaluation**
+- Runs full backtests with:
+  - Equity curve visualization
+  - Trade logs
+  - Performance metrics
+
+### 7. **Reak-Time Evaluation**
+- Runs full backtests with:
+  - Equity curve visualization
+  - Trade logs
+  - Performance metrics
+---
+
+## 📈 Zero-Lag MACD Strategy Enhancement
+
+### 🔹 Classic Approach
+- Trades based solely on MACD/Zero-Lag MACD crossovers
+
+### 🔹 AI-Enhanced Approach
+- Executes trade **only if**:
+  - Technical signal (MACD crossover) **and**
+  - **Model prediction** confirms direction  
+  *(e.g., only BUY if MACD crosses up **and** predicted price > current)*
+
+### ✅ Result:
+- Fewer false signals  
+- Improved **risk-adjusted returns**
+
+---
+
+## 🚀 Usage Instructions
+
+### 1. Classic Backtesting (No Machine Learning)
+
+**Use:**
+- `app.py`
+- `parameter_optimization.py`
+- `stock_analysis.py`
+
+These scripts/notebooks allow you to run and optimize conventional MACD/Zero-Lag MACD strategies on any stock and timeframe for backtesting, enabling evaluation of the trading strategies' ROI. They also include parameter optimization features to maximize ROI.
+
+---
+
+### 2. Machine Learning-Enhanced Backtesting
+
+**Use:**
+- `ai_app.py`
+- `ai_parameter_optimization.py`
+- `ai_stock_analysis.py`
+- `model_loader.py`
+
+These scripts/notebooks let you:
+- Use the deployed individual and ensemble machine learning models.
+- Integrate predictions into conventional MACD/Zero-Lag MACD trading strategies to evaluate novel machine learning–enhanced Zero-Lag MACD strategies.
+- Optimize parameters and backtest the enhanced strategies.
+  
+---
+
+### 3. Jupyter Notebooks
+
+Use the provided `.ipynb` notebooks for:
+- Step-by-step experimentation  
+- Visualization  
+- Research documentation
+
+---
+
+### 4. Model Deployment & Loading
+
+- Trained models are saved in the `models/` directory.
+- Use `model_loader.py` to:
+  - Load models
+  - Generate predictions for new data or live trading
+
+## 🔁 Flowcharts
+
+*Insert your flowcharts here to illustrate the overall system architecture and trading strategy construction process.*
+
+---
+
+## 📦 Dependencies
+
+- Python 3.8+
+- `shiny`
+- `shinyswatch`
+- `yfinance`
+- `plotly`
+- `pandas`
+- `numpy`
+- `Jinja2`
+- `darts`
+- `optuna`
+- `scikit-learn`
+- `torch`
+- `pytorch-lightning`
+- `matplotlib`
+- `seaborn`
+- `tabulate`
+- `joblib`
+
+### Install dependencies with:
+
+pip install -r requirements.txt
+
+---
+
+## 📚 References
+
+- **Zero-Lag MACD**  
+  [https://www.tradingview.com/script/chlgDc8f-Zero-Lag-Multi-Timeframe-MACD/](https://www.tradingview.com/script/chlgDc8f-Zero-Lag-Multi-Timeframe-MACD/)
+
+- **Darts Time Series Library**  
+  [https://github.com/unit8co/darts](https://github.com/unit8co/darts)
+
+- **Optuna Hyperparameter Optimization**  
+  [https://optuna.org/](https://optuna.org/)
+
+- **Yahoo Finance API**  
+  [https://github.com/ranaroussi/yfinance](https://github.com/ranaroussi/yfinance)
+
+- **Alpaca API**  
+  [https://alpaca.markets/](https://alpaca.markets/)
+
+---
+
+## 📜 License
+
+This project is for academic and research purposes only.  
+See the LICENSE file for details.
+
+---
+
+## 🤝 Contributions & Contact
+
+For questions, suggestions, or contributions:
+
+- Open an issue  
+- Or contact the project maintainer
+
