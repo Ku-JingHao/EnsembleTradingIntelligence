@@ -35,14 +35,14 @@ By integrating machine learning predictions—especially ensemble models that co
 
 ## 📂 Project Structure
 ```text
-├── app.py                      # Backtesting for classic MACD/Zero-Lag MACD strategies (no AI)
-├── parameter_optimization.py   # Parameter optimization for classic strategies
-├── stock_analysis.py           # Data fetching, visualization, and analysis (classic)
+├── app.py                       # Backtesting for classic MACD/Zero-Lag MACD strategies (no AI)
+├── parameter_optimization.py    # Parameter optimization for classic strategies
+├── stock_analysis.py            # Data fetching, visualization, and analysis (classic)
 │
-├── ai_app.py                   # Backtesting for AI-enhanced MACD/Zero-Lag MACD strategies
-├── ai_parameter_optimization.py# Parameter optimization for AI-enhanced strategies
-├── ai_stock_analysis.py        # Data fetching, visualization, and analysis (AI-enhanced)
-├── model_loader.py             # Model loading and prediction utilities for AI models
+├── ai_app.py                    # Backtesting for AI-enhanced MACD/Zero-Lag MACD strategies
+├── ai_parameter_optimization.py # Parameter optimization for AI-enhanced strategies
+├── ai_stock_analysis.py         # Data fetching, visualization, and analysis (AI-enhanced)
+├── model_loader.py              # Model loading and prediction utilities for AI models
 │
 ├── Daily_ModelConstruction.ipynb      # Jupyter notebook: model training & ensemble research (daily)
 ├── Hourly_ModelConstruction.ipynb     # Jupyter notebook: model training & ensemble research (hourly)
@@ -51,6 +51,7 @@ By integrating machine learning predictions—especially ensemble models that co
 │
 ├── models/                     # Saved/trained models and configs
 ├── realtime_tradingbot/        # Various types of real-time trading bots using the innovative ML-enhanced Zero-Lag MACD trading strategy
+├── Poster.pdf                  # Project Poster Presentation
 ├── requirements.txt            # Python dependencies
 └── README.md                   # This file
 ```
