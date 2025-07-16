@@ -29,7 +29,7 @@ By integrating machine learning predictions—especially ensemble models that co
 ---
 
 ## 📂 Project Structure
-.
+```text
 ├── app.py                      # Backtesting for classic MACD/Zero-Lag MACD strategies (no AI)
 ├── parameter_optimization.py   # Parameter optimization for classic strategies
 ├── stock_analysis.py           # Data fetching, visualization, and analysis (classic)
@@ -48,7 +48,7 @@ By integrating machine learning predictions—especially ensemble models that co
 ├── realtime_tradingbot/        # Various types of real-time trading bots using the innovative ML-enhanced Zero-Lag MACD trading strategy
 ├── requirements.txt            # Python dependencies
 └── README.md                   # This file
-
+```
 
 ---
 
