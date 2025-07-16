@@ -4,7 +4,12 @@
 This project investigates how ensemble machine learning models using simple averaging can improve the accuracy and generalizability of stock price predictions. These enhanced predictions are then integrated into trading strategies based on the Zero-Lag MACD technical indicator. 
 The ultimate goal is to filter trading signals by forecasting one-step-ahead stock prices, enabling more effective buy and sell decisions in real-world trading scenarios.
 
-By combining robust predictive models with technical analysis, this system aims to:
+Problem Statement: 
+- Limitations of Individual Models :  Individual machine learning models often fail to capture the stock market's non-linear patterns, suffer from overfitting, and lack generalization across different market conditions.
+- Limitations of Conventional Technical Indicators in Trading Strategies : Rule-based trading methods using technical indicators struggle with noisy data, rely on lagging signals, and are unable to adapt dynamically to market changes.
+- Lack of Practical Implementation of Machine Learning Models : Most machine learning-driven stock prediction models focus on accuracy but lack assessment in real-world environments, missing robust evaluation through backtesting and live simulations in actual trading scenarios.
+
+Objective:
 - To propose an ensemble machine learning approach for stock price prediction through the enhancement of technical indicators in a trading strategy.
 - To compare the performance of individual machine learning models against ensemble machine learning approaches for stock price prediction.
 - To assess the real-world viability and benchmark conventional statistical methods with the proposed ensemble machine learning approach through backtesting and real-time trading simulations.
@@ -98,13 +103,24 @@ By integrating machine learning predictions—especially ensemble models that co
 ## 📈 Zero-Lag MACD Strategy Enhancement
 
 ### 🔹 Classic Approach
-- Trades based solely on MACD/Zero-Lag MACD crossovers
+- Trades based solely on MACD / Zero-Lag MACD crossovers.
+
+#### Zero-Lag MACD Strategy Trading Conditions
+<img width="699" height="247" alt="image" src="https://github.com/user-attachments/assets/cf8c4aa0-e498-4c11-8a59-30009d17568a" />
 
 ### 🔹 AI-Enhanced Approach
-- Executes trade **only if**:
-  - Technical signal (MACD crossover) **and**
-  - **Model prediction** confirms direction  
-  *(e.g., only BUY if MACD crosses up **and** predicted price > current)*
+- Executes trade **only if** both conditions are met:
+  1. **Technical signal** (MACD crossover), and  
+  2. **Model prediction** confirms the signal's direction.
+
+#### Decision Logic:
+- **Buy Signal Confirmation**:  
+  If a buy signal occurs at time `t`, the predicted price at time `t + 1` **must be higher** than the actual price at time `t` for the buy trade to be executed. Otherwise, the signal is ignored.
+
+- **Sell Signal Confirmation**:  
+  If a sell signal occurs at time `t`, the predicted price at time `t + 1` **must be lower** than the actual price at time `t` for the sell trade to be executed. Otherwise, the signal is disregarded.
+
+<img width="935" height="292" alt="image" src="https://github.com/user-attachments/assets/23e52cab-f692-45f2-87f0-26368f4116c2" />
 
 ### ✅ Result:
 - Fewer false signals  
@@ -174,7 +190,9 @@ These notebooks provide for building models, constructing ensembles, and evaluat
 
 ## 🔁 Flowcharts
 
-*Insert your flowcharts here to illustrate the overall system architecture and trading strategy construction process.*
+<img width="5040" height="1964" alt="image" src="https://github.com/user-attachments/assets/16fb1e36-7980-4213-9a9b-9d0b687aba8c" />
+
+The methodology flowchart outlines the process of developing an ensemble machine learning framework for stock price prediction, with a focus on real-world applicability to enhance trading strategies. The process extends beyond model development to include the deployment of models for constructing trading strategies. It integrates a Zero-Lag MACD and signal generation with parameter optimization as a supplementary mechanism to validate the execution of actionable signals. Backtesting is employed to iteratively refine and optimize the trading strategy. Additionally, a real-time trading bot is implemented to further evaluate the proposed methodology by actively monitoring and validating trades in a live environment, ensuring its practical effectiveness.
 
 ---
 
@@ -199,8 +217,9 @@ These notebooks provide for building models, constructing ensembles, and evaluat
 - `joblib`
 
 ### Install dependencies with:
-
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
@@ -224,9 +243,7 @@ pip install -r requirements.txt
 ---
 
 ## 📜 License
-
 This project is for academic and research purposes only.  
-See the LICENSE file for details.
 
 ---
 
