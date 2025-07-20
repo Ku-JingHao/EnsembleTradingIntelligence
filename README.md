@@ -121,7 +121,8 @@ By integrating machine learning predictions—especially ensemble models that co
 - **Sell Signal Confirmation**:  
   If a sell signal occurs at time `t`, the predicted price at time `t + 1` **must be lower** than the actual price at time `t` for the sell trade to be executed. Otherwise, the signal is disregarded.
 
-<img width="935" height="292" alt="image" src="https://github.com/user-attachments/assets/23e52cab-f692-45f2-87f0-26368f4116c2" />
+<img width="1052" height="484" alt="image" src="https://github.com/user-attachments/assets/9fd5fbf1-d8d6-40b8-89e6-0d08bc36f5e3" />
+
 
 ### ✅ Result:
 - Fewer false signals  
